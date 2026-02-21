@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Workspace Seat Reservation</title>
+</head>
+<body>
+
+  <h1 class="title">Workspace Seat Reservation</h1>
+
+  <div class="top-bar">
+    <div>
+      <label for="room">Choose Room:</label>
+      <select id="room">
+        <option value="SMG1">Room A - Pintu 1</option>
+        <option value="SMG2">Room B - Pintu 2</option>
+        <option value="SMG3">Room C - Pintu 3</option>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li><div class="seat"></div> <small>Available</small></li>
+      <li><div class="seat selected"></div> <small>Reserved</small></li>
+      <li><div class="seat occupied"></div> <small>Occupied</small></li>
+    </ul>
+  </div>
+
+  <div class="layout">
+
+    <!-- SEAT MAP -->
+    <div class="container">
+      <div class="screen"></div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <!-- RESERVATION PANEL -->
+    <div class="reservation-panel">
+      <h3>Reserve Seat</h3>
+
+      <label>Selected Seat</label>
+      <input type="text" id="selectedSeat" readonly />
+
+      <label>Today</label>
+      <input type="date" id="today" />
+
+      <label>Movie</label>
+      <select id="movie">
+        <option value="">-- Select Movie --</option>
+        <option value="Istriku Bapakku">Istriku Bapakku</option>
+        <option value="Legends Of Sawiet">Legends Of Sawiet</option>
+        <option value="Pria Solo">Pria Solo</option>
+        <option value="Bercucuran">Bercucuran</option>
+      </select>
+
+      <button id="reserveBtn">Confirm Reservation</button>
+
+      <div class="summary-box">
+        <p>Total Seat: <span id="totalSeat">0</span></p>
+        <p>Available: <span id="availableSeat">0</span></p>
+        <p>Reserved: <span id="reservedSeat">0</span></p>
+        <p>Occupied: <span id="occupiedSeat">0</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
